@@ -43,6 +43,7 @@ public class RunInfo
         public ETier Tier;
         public Guid TemplateId;
         public string Name;
+        public Dictionary<ECardAttributeType, int> Attributes { get; set; } = new Dictionary<ECardAttributeType, int>();
     }
     public class CardInfo
     {

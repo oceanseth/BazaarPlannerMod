@@ -190,7 +190,8 @@ public class Plugin : BaseUnityPlugin
                 {
                     TemplateId = skill.TemplateId,
                     Tier = skill.Tier,
-                    Name = skill.Template.Localization.Title.Text
+                    Name = skill.Template.Localization.Title.Text,
+                    Attributes = skill.Attributes
                 });
         }
 
@@ -214,10 +215,20 @@ public class Plugin : BaseUnityPlugin
             prestige = runInfo.Prestige,
             income = runInfo.Income,
             gold = runInfo.Gold,
-            skills = runInfo.Skills?.Select(s => new
+            skills = runInfo.Skills?.Select(s =>
             {
-                name = s.Name,
-                tier = s.Tier
+                var skillDict = new Dictionary<string, object>
+                {
+                    ["name"] = s.Name,
+                    ["tier"] = s.Tier
+                };
+                
+                if (s.Attributes.ContainsKey(ECardAttributeType.Custom_0))
+                {
+                    skillDict["Custom_0"] = s.Attributes[ECardAttributeType.Custom_0];
+                }
+                
+                return skillDict;
             }).ToList(),
         });
 
@@ -235,10 +246,20 @@ public class Plugin : BaseUnityPlugin
                 income = runInfo.OppIncome,
                 prestige = runInfo.OppPrestige,
                 day = runInfo.Day,
-                skills = runInfo.OppSkills?.Select(s => new
+                skills = runInfo.OppSkills?.Select(s =>
                 {
-                    name = s.Name,
-                    tier = s.Tier
+                    var skillDict = new Dictionary<string, object>
+                    {
+                        ["name"] = s.Name,
+                        ["tier"] = s.Tier
+                    };
+                    
+                    if (s.Attributes.ContainsKey(ECardAttributeType.Custom_0))
+                    {
+                        skillDict["Custom_0"] = s.Attributes[ECardAttributeType.Custom_0];
+                    }
+                    
+                    return skillDict;
                 }).ToList()
             });
         }
