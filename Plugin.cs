@@ -332,6 +332,14 @@ public class Plugin : BaseUnityPlugin
                 cardDict["Custom_2"] = card.Attributes[ECardAttributeType.Custom_2];
             if(card.Attributes?.ContainsKey(ECardAttributeType.Custom_3) == true)
                 cardDict["Custom_3"] = card.Attributes[ECardAttributeType.Custom_3];
+            if(card.Attributes?.ContainsKey(ECardAttributeType.Quest_1) == true)
+                cardDict["quest_1"] = card.Attributes[ECardAttributeType.Quest_1];
+            if(card.Attributes?.ContainsKey(ECardAttributeType.Quest_2) == true)
+                cardDict["quest_2"] = card.Attributes[ECardAttributeType.Quest_2];
+            if(card.Attributes?.ContainsKey(ECardAttributeType.Quest_3) == true)
+                cardDict["quest_3"] = card.Attributes[ECardAttributeType.Quest_3];
+            if(card.Attributes?.ContainsKey(ECardAttributeType.Quest_4) == true)
+                cardDict["quest_4"] = card.Attributes[ECardAttributeType.Quest_4];
 
 
             return cardDict;
