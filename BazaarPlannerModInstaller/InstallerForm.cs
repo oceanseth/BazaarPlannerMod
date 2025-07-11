@@ -10,7 +10,12 @@ namespace BazaarPlannerModInstaller
     public partial class InstallerForm : Form
     {
         private TextBox installPathTextBox;
-        private const string DEFAULT_INSTALL_PATH = @"C:\Program Files\Tempo Launcher - Beta\The Bazaar game_64\bazaarwinprodlatest";
+        private static string DEFAULT_INSTALL_PATH => Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            "Tempo Launcher - Beta",
+            "game",
+            "bazaarwinprodlatest"
+        );
         private Button installButton;
         private Label instructionsLabel;
         private System.Windows.Forms.Timer configCheckTimer;
