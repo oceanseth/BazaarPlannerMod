@@ -8,7 +8,7 @@
 
     <AssemblyName>BazaarPlannerMod</AssemblyName>
     <Description>Bazaar Planner Integration Mod</Description>
-    <Version>1.0.8</Version>
+    <Version>1.0.10</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>
