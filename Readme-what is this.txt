@@ -22,14 +22,15 @@ In the games, tracked runs, and data on the site, it will use the display name i
 ========== How to Install on Windows ============
 Simply extract all the files to a directory and run BazaarPlannerModInstaller.exe
 Follow instructions to get the BazaarPlanner.config file from the website; you can install once it's detected in the same directory.
-(a linux installation guide is in the github repo, credits to @yggraszill !)
+Run customlauncher.bat file to launch the game, as their launcher detects the mod
 
 ========== Manual install ====================================
 Without running the .exe - if you don't trust it not to have been tampered with.
 Always good to do this when possible, we don't publish with viruses/malware/spyware, but your friend giving this to you might give you a keylogger along with it! If you are going to run an exe make sure its the one linked directly from our site.
 ==============================================================
 1. extract BepInEx_win_x64_5.4.23.2.zip to your game install directory (that contains TheBazaar.exe).
-By default this is C:\Program Files\Tempo Launcher - Beta\The Bazaar game_64\bazaarwinprodlatest
+This directory may be different depending on if you are in steam or standalone. The one that works for me is
+C:\Users\PC\AppData\Roaming\Tempo Launcher - Beta\game\buildx64
 
 2. create a directory "plugins" inside the BepInEx directory that got created.
 
