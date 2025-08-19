@@ -23,4 +23,11 @@
             DestinationFolder="$(PublishDir)"
             SkipUnchangedFiles="true" />
   </Target>
+  <Target Name="CopyToBazaarPlannerMod" AfterTargets="Build">
+    <Message Text="Copying BazaarPlannerMod.dll to $(PublishDir)" Importance="high" />
+    <Copy
+            SourceFiles="BazaarPlannerMod.dll"
+            DestinationFolder="$(PublishDir)"
+            SkipUnchangedFiles="true" />
+  </Target>
 </Project>
