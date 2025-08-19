@@ -8,7 +8,7 @@
 
     <AssemblyName>BazaarPlannerMod</AssemblyName>
     <Description>Bazaar Planner Integration Mod</Description>
-    <Version>1.0.9</Version>
+    <Version>1.1.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>
@@ -16,7 +16,7 @@
       https://nuget.bepinex.dev/v3/index.json;
     </RestoreAdditionalProjectSources>
     <RootNamespace>BazaarPlannerMod</RootNamespace>
-    <GamePath>C:\Program Files\Tempo Launcher - Beta\The Bazaar game_64\bazaarwinprodlatest</GamePath>
+    <GamePath>C:\Users\PC\AppData\Roaming\Tempo Launcher - Beta\game\buildx64</GamePath>
     <NoWarn>CS0436</NoWarn>
   </PropertyGroup>
   <ItemGroup>
@@ -103,4 +103,12 @@
             DestinationFolder="./BazaarPlannerModInstaller"
             SkipUnchangedFiles="true" />
   </Target>
+  <Target Name="CopyCustomLauncher" AfterTargets="Build">
+    <Message Text="Copying customlauncher.bat to $(OutputPath)" Importance="high" />
+    <Copy
+            SourceFiles="customlauncher.bat"
+            DestinationFolder="$(OutputPath)"
+            SkipUnchangedFiles="true" />
+  </Target>
+  
 </Project>

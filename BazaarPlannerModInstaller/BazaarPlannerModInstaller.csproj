@@ -15,4 +15,12 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <DebugType>embedded</DebugType>
   </PropertyGroup>
+  
+  <Target Name="CopyCustomLauncherToPublish" AfterTargets="Publish">
+    <Message Text="Copying customlauncher.bat and README to publish folder" Importance="high" />
+    <Copy
+            SourceFiles="../customlauncher.bat;../Readme-what is this.txt"
+            DestinationFolder="$(PublishDir)"
+            SkipUnchangedFiles="true" />
+  </Target>
 </Project>

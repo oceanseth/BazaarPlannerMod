@@ -14,7 +14,7 @@ namespace BazaarPlannerModInstaller
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
             "Tempo Launcher - Beta",
             "game",
-            "bazaarwinprodlatest"
+            "buildx64"
         );
         private Button installButton;
         private Label instructionsLabel;
