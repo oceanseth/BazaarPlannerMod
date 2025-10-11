@@ -1,4 +1,5 @@
 # What does this mod do?
+**[🎥 See it in action here!](https://youtu.be/WVbbyau6Eeg)**
 1. As board state changes in game, mod sends data to the database the website reads from, using your authentication token in config file.
 2. Enables a 'streamer mode' feature so within the game you will never see your bazaar username on screen; In the games, tracked runs, and data on the site, it will use the display name in the config file.
 3. When running the mod, you can click 'follow' on the website to cause changes made in game to automatically be seen on the website.
