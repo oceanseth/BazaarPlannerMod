@@ -674,7 +674,7 @@ public class Plugin : BaseUnityPlugin
     {
         [HarmonyPrefix]
         static bool Prefix(HeroBannerController __instance, ref string userName, ref int nameId, 
-            ref string titlePrefix, ref string titleSuffix, TheBazaar.ProfileData.ISeasonRank currentSeasonRank, int? leaderboardPosition)
+            ref string titlePrefix, TheBazaar.ProfileData.ISeasonRank currentSeasonRank, int? leaderboardPosition)
         {
             // Check if this is for our player
             if(userName != Data.Profile?.Username) return true; // Let original method run unmodified

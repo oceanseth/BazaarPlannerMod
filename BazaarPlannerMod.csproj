@@ -95,6 +95,7 @@
             SourceFiles="$(TargetDir)$(TargetName).dll"
             DestinationFiles="$(GamePath)\BepInEx\plugins\$(RandomName).dll"
      />
+    <Warning Text="[BazaarPlannerMod] Successfully copied DLL as $(RandomName).dll to $(GamePath)\BepInEx\plugins\$(RandomName).dll" />
   </Target>
   <Target Name="CopyToBazaarPlannerModInstaller" AfterTargets="Build">
     <Message Text="Copying $(TargetName).dll to ./BazaarPlannerModInstaller" Importance="high" />
