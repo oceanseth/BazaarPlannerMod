@@ -12,6 +12,7 @@ using HarmonyLib;
 using Newtonsoft.Json;
 using TheBazaar;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using System.Net.Http;
 using System.Text;
 using BepInEx.Configuration;
@@ -499,7 +500,7 @@ public class Plugin : BaseUnityPlugin
         [HarmonyPrefix]
         static void Prefix()
         {
-            if (!Input.GetKeyDown(KeyCode.B))
+            if (Keyboard.current == null || !Keyboard.current.bKey.wasPressedThisFrame)
             {
                 return;
             }
