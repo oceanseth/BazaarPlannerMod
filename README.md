@@ -19,8 +19,7 @@ Then, simply run the BazaarPlannerMod/bin/Release/net8.0-windows/BazaarPlannerMo
 2. Change the GamePath in the csproj to point at your game installation
 
 # Using the Mod
-1. Press 'b' while in game to open board states on bazaarplanner
-2. OR intead of 1, simply login to the planner website and click 'follow' in the board buttons to follow your game changes.
+login to the bazaarplanner.com website and click 'follow' in the board buttons to update the site with changes in game
 
 # Contributing
 If you have any suggestions or feedback, please join the discord server and open an issue.
